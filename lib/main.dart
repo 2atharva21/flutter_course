@@ -20,13 +20,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        fontFamily: GoogleFonts.lato().fontFamily,
-      ),
+          fontFamily: GoogleFonts.lato().fontFamily,
+          appBarTheme: const AppBarTheme(
+            color: Colors.white,
+            elevation: 0.0,
+            iconTheme: IconThemeData(color: Colors.deepPurple),
+          ),
+          textTheme: Theme.of(context).textTheme),
       debugShowCheckedModeBanner: false,
       routes: {
-        "/": (context) => LoginPage(),
+        "/": (context) => const LoginPage(),
         MyRoutes.HomeRoute: (context) => HomePage(),
-        MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.loginRoute: (context) => const LoginPage(),
       },
     );
   }

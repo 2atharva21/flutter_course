@@ -11,9 +11,9 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   String name = "";
   bool changeButton = false;
-  final _formkey = GlobalKey<FormState>();
+  final _forky = GlobalKey<FormState>();
   moveToHome(BuildContext content) async {
-    if (_formkey.currentState!.validate()) {
+    if (_forky.currentState!.validate()) {
        setState(() {
         changeButton = true;
       });
@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: const Color.fromARGB(255, 255, 245, 245),
       body: SingleChildScrollView(
         child: Form(
-          key: _formkey,
+          key: _forky,
           child: Column(
             children: [
               const SizedBox(height: 20.0),
